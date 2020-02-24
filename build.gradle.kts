@@ -2,9 +2,9 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 plugins {
-    kotlin("jvm") version "1.3.0"
+    kotlin("jvm") version "1.3.61"
     // need to use Gretty here because of https://github.com/johndevs/gradle-vaadin-plugin/issues/317
-    id("org.gretty") version "2.2.0"
+    id("org.gretty") version "3.0.1"
     war
 }
 
@@ -37,5 +37,5 @@ dependencies {
         exclude(mapOf("group" to "org.eclipse.jetty"))
         exclude(mapOf("group" to "org.eclipse.jetty.websocket"))
     }
-    compile("org.slf4j:slf4j-simple:1.7.25")
+    compile("org.slf4j:slf4j-simple:1.7.30")
 }
