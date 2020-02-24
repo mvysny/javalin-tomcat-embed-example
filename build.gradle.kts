@@ -11,7 +11,7 @@ plugins {
 defaultTasks("clean", "build")
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 tasks.withType<KotlinCompile> {
@@ -33,7 +33,7 @@ tasks.withType<Test> {
 
 dependencies {
     compile(kotlin("stdlib-jdk8"))
-    compile("io.javalin:javalin:2.4.0") {
+    compile("io.javalin:javalin:3.7.0") {
         exclude(mapOf("group" to "org.eclipse.jetty"))
         exclude(mapOf("group" to "org.eclipse.jetty.websocket"))
     }
